@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Memes
+comment1.params=
+comment1.target=Memes()
+comment2.params=
+comment2.target=void\ generateMeme()
+comment3.params=eingabe
+comment3.target=void\ filter(java.lang.String)
+comment4.params=
+comment4.target=void\ zufall()
+numComments=5
