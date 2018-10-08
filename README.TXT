@@ -7,7 +7,7 @@ zumindest die folgenden Angaben umfassen:
 ------------------------------------------------------------------------
 
 PROJEKTBEZEICHNUNG:
-PROJEKTZWECK:
+PROJEKTZWECK: Test
 VERSION oder DATUM:
 WIE IST DAS PROJEKT ZU STARTEN:
 AUTOR(EN):
