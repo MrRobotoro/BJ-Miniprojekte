@@ -54,11 +54,11 @@ public class Memes
         zusatz[2] = "Deutschland";
         zusatz[3] = "Russland";
         zusatz[4] = "Elmos Liebling.";
-        zusatz[5] = "die USA.";
+        zusatz[5] = "die USA";
         zusatz[6] = "die besten Hits aus den 80ern";
         zusatz[7] = "Despacito";
         zusatz[8] = "McDonalds";
-        zusatz[9] = "die krosse Krabbe.";
+        zusatz[9] = "die krosse Krabbe";
         zusatz[10] = "Fortnite";
         zusatz[11] = "Gulag";
 
@@ -79,27 +79,43 @@ public class Memes
 
     public void filter(String eingabe)
     {
-        boolean test = false;
+        boolean pruef = false;
         for(int i=0;i<memes.length;i++)
-        if(memes[i].equals(eingabe))
-            {System.out.println("Test");
-                test = true;}
+            if(memes[i].equals(eingabe))
+            {
+                aus1 = memes[i];
+                zufall();
+                aus2 = verb[zuf];
+                zufall();
+                aus3 = zusatz[zuf];
+                System.out.println("Hier ist dein gewünschter Meme:");
+                System.out.println(aus1+lz+aus2+lz+aus3);
+                pruef = true;}
 
-            for(int i=0; i<verb.length;i++)
-                if(verb[i].equals(eingabe))
-                {System.out.println("Test");
-                    test = true;}
+        for(int i=0; i<verb.length;i++)
+            if(verb[i].equals(eingabe))
+            {zufall();
+                aus1 = memes[zuf];
+                aus2 = verb[i];
+                zufall();
+                aus3 = zusatz[zuf];
+                System.out.println("Hier ist dein gewünschter Meme:");
+                System.out.println(aus1+lz+aus2+lz+aus3);
+                pruef = true;}
 
-            for(int i=0;i<zusatz.length;i++)
-                if(zusatz[i].equals(eingabe))
-                {System.out.println("Test");
-                    test = true;}
-                    else if(test == false)
-                    {System.err.println("Ich konnte diesen Begriff nicht finden");}
-                    
+        for(int i=0;i<zusatz.length;i++)
+            if(zusatz[i].equals(eingabe))
+            {zufall();
+                aus1 = memes[zuf];
+                zufall();
+                aus2 = verb[zuf];
+                aus3 = zusatz[i];
+                System.out.println("Hier ist dein gewünschter Meme:");
+                System.out.println(aus1+lz+aus2+lz+aus3);}
+            else if(pruef == false)
+            {System.err.println("Ich konnte diesen Begriff nicht finden");}
 
-        }
-   
+    }
 
     private void zufall()
     {
