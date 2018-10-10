@@ -1,6 +1,9 @@
-//Dieses Programm wurde von MrRobotoro und Error. geschrieben.
-//Wir bitten darum, dieses nicht ohne unsere Kenntniss auf externen Seiten hochzuladen und als eigenes Werk auszugeben.
-//~MrRobotoro|Jonas & Error|Mert
+/*
+Dieses Programm wurde von Error. und MrRobotoro. geschrieben.
+Wir bitten darum, dieses nicht ohne unsere Kenntniss auf externen Seiten hochzuladen und als eigenes Werk auszugeben.
+~Error|Mert & MrRobotoro|Jonas
+ */
+
 public class Memes
 {
     private double zufall;
@@ -13,6 +16,7 @@ public class Memes
     private String[] verb;
     private String[] zusatz;
     private int arraylaenge;
+
     public Memes()
     { 
         lz = " ";
@@ -61,7 +65,6 @@ public class Memes
         zusatz[9] = "die krosse Krabbe";
         zusatz[10] = "Fortnite";
         zusatz[11] = "Gulag";
-
     }
 
     public void generateMeme()
@@ -80,7 +83,9 @@ public class Memes
     public void filter(String eingabe)
     {
         boolean pruef = false;
-        for(int i=0;i<memes.length;i++)
+
+        for(int i=0; i<memes.length; i++)
+        {
             if(memes[i].equals(eingabe))
             {
                 aus1 = memes[i];
@@ -90,31 +95,116 @@ public class Memes
                 aus3 = zusatz[zuf];
                 System.out.println("Hier ist dein gewünschter Meme:");
                 System.out.println(aus1+lz+aus2+lz+aus3);
-                pruef = true;}
+                pruef = true;
+            }
+        }
 
-        for(int i=0; i<verb.length;i++)
+        for(int i=0; i<verb.length; i++)
+        {    
             if(verb[i].equals(eingabe))
-            {zufall();
+            {
+                zufall();
                 aus1 = memes[zuf];
                 aus2 = verb[i];
                 zufall();
                 aus3 = zusatz[zuf];
                 System.out.println("Hier ist dein gewünschter Meme:");
                 System.out.println(aus1+lz+aus2+lz+aus3);
-                pruef = true;}
+                pruef = true;
+            }
+        }
 
-        for(int i=0;i<zusatz.length;i++)
+        for(int i=0; i<zusatz.length;i++)
+        {    
             if(zusatz[i].equals(eingabe))
-            {zufall();
+            {
+                zufall();
                 aus1 = memes[zuf];
                 zufall();
                 aus2 = verb[zuf];
                 aus3 = zusatz[i];
                 System.out.println("Hier ist dein gewünschter Meme:");
-                System.out.println(aus1+lz+aus2+lz+aus3);}
+                System.out.println(aus1+lz+aus2+lz+aus3);
+            }
             else if(pruef == false)
-            {System.err.println("Ich konnte diesen Begriff nicht finden");}
+            {
+                System.err.println("Error 404: Zusatz not found");
+            }
+        }
+    }
 
+    public void zufallsMeme(String eingabe, String kategorie)
+    {
+        boolean pruef;
+
+        if(kategorie.equals(memes))
+        {
+            for(int i=0; i<memes.length; i++)
+            {
+                if(memes[i].equals(eingabe))
+                {
+                    pruef = false;
+                    System.err.println("Error 1062: Duplicates found.");
+                }
+            }
+        }
+        else
+        {
+            aus1 = eingabe;
+            zufall();
+            aus2 = verb[zuf];
+            zufall();
+            aus3 = zusatz[zuf];
+
+            System.out.println("Hier ist dein gewünschter Meme:");
+            System.out.println(aus1+lz+aus2+lz+aus3);
+        }
+
+        if(kategorie.equals(verb))
+        {
+            for(int i=0; i<verb.length; i++)
+            {
+                if(verb[i].equals(eingabe))
+                {
+                    pruef = false;
+                    System.err.println("Error 1062: Duplicates found.");
+                }
+            }
+        }
+        else
+        {
+            aus1 = eingabe;
+            zufall();
+            aus2 = verb[zuf];
+            zufall();
+            aus3 = zusatz[zuf];
+
+            System.out.println("Hier ist dein gewünschter Meme:");
+            System.out.println(aus1+lz+aus2+lz+aus3);
+        }
+
+        if(kategorie.equals(zusatz))
+        {
+            for(int i=0; i<zusatz.length; i++)
+            {
+                if(zusatz[i].equals(eingabe))
+                {
+                    pruef = false;
+                    System.err.println("Error 1062: Duplicates found.");
+                }
+            }
+        }
+        else
+        {
+            aus1 = eingabe;
+            zufall();
+            aus2 = verb[zuf];
+            zufall();
+            aus3 = zusatz[zuf];
+
+            System.out.println("Hier ist dein gewünschter Meme:");
+            System.out.println(aus1+lz+aus2+lz+aus3);
+        }
     }
 
     private void zufall()

@@ -1,11 +1,14 @@
 #BlueJ class context
 comment0.target=Memes
+comment0.text=\r\nDieses\ Programm\ wurde\ von\ Error.\ und\ MrRobotoro.\ geschrieben.\r\nWir\ bitten\ darum,\ dieses\ nicht\ ohne\ unsere\ Kenntniss\ auf\ externen\ Seiten\ hochzuladen\ und\ als\ eigenes\ Werk\ auszugeben.\r\n~Error|Mert\ &\ MrRobotoro|Jonas\r\n
 comment1.params=
 comment1.target=Memes()
 comment2.params=
 comment2.target=void\ generateMeme()
 comment3.params=eingabe
 comment3.target=void\ filter(java.lang.String)
-comment4.params=
-comment4.target=void\ zufall()
-numComments=5
+comment4.params=eingabe\ kategorie
+comment4.target=void\ zufallsMeme(java.lang.String,\ java.lang.String)
+comment5.params=
+comment5.target=void\ zufall()
+numComments=6
